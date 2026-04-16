@@ -1,0 +1,126 @@
+### Create ticket
+POST http://localhost:8080/tickets
+Content-Type: application/json
+
+{
+  "id": 10,
+  "title": "Service layer test",
+  "status": "OPEN"
+}
+
+### Get all tickets
+GET http://localhost:8080/tickets
+
+### Get one ticket
+GET http://localhost:8080/tickets/10
+
+### Update ticket
+PUT http://localhost:8080/tickets/10
+Content-Type: application/json
+
+{
+  "id": 10,
+  "title": "Service layer updated",
+  "status": "RESOLVED"
+}
+
+### Delete ticket
+DELETE http://localhost:8080/tickets/10
+
+###
+GET http://localhost:8080/tickets/999
+
+###
+POST http://localhost:8080/tickets
+Content-Type: application/json
+
+{
+  "id": 20,
+  "title": "",
+  "status": ""
+}
+###
+POST http://localhost:8080/tickets
+Content-Type: application/json
+
+{
+"id": 21,
+"title": "Validation works",
+"status": "OPEN"
+}
+
+###
+GET http://localhost:8080/tickets
+
+###
+POST http://localhost:8080/tickets
+Content-Type: application/json
+
+{
+  "title": "Postgres test ticket",
+  "status": "OPEN"
+}
+
+###
+POST http://localhost:8080/auth/login
+Content-Type: application/json
+
+{
+  "username": "frank",
+  "password": "password123"
+}
+
+###
+POST http://localhost:8080/auth/register
+Content-Type: application/json
+
+{
+  "username": "frank",
+  "password": "password123"
+}
+
+###
+POST http://localhost:8080/auth/login
+Content-Type: application/json
+
+{
+  "username": "frank",
+  "password": "password123"
+}
+
+###
+POST http://localhost:8080/auth/register
+Content-Type: application/json
+
+{
+  "username": "frank2",
+  "password": "password123"
+}
+
+###
+POST http://localhost:8080/auth/login
+Content-Type: application/json
+
+{
+  "username": "frank2",
+  "password": "password123"
+}
+###
+GET http://localhost:8080/tickets
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJmcmFuazIiLCJyb2xlIjoiVVNFUiIsImlhdCI6MTc3NjM2NDk2OCwiZXhwIjoxNzc2MzY4NTY4fQ.NPFVL8tbW27CqrouU_EyjyqXCC47dgoq0sJyKsc9l4A
+
+###
+DELETE http://localhost:8080/tickets/1
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJmcmFuazIiLCJyb2xlIjoiVVNFUiIsImlhdCI6MTc3NjM2NDk2OCwiZXhwIjoxNzc2MzY4NTY4fQ.NPFVL8tbW27CqrouU_EyjyqXCC47dgoq0sJyKsc9l4A
+
+###
+POST http://localhost:8080/auth/login
+Content-Type: application/json
+
+{
+  "username": "frank",
+  "password": "password123"
+}
+###
+DELETE http://localhost:8080/tickets/1
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJmcmFuayIsInJvbGUiOiJBRE1JTiIsImlhdCI6MTc3NjM2NTM1NCwiZXhwIjoxNzc2MzY4OTU0fQ.ijF6CpfTHM9kaa0PbWKcrDdaU6mtU9vXg6eLD7miYmU
